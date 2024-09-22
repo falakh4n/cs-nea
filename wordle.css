@@ -1,0 +1,253 @@
+/* Base Styles (Light Mode Default) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: white; /* Default light mode background */
+    color: black; /* Default light mode text color */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text colors */
+}
+
+hr {
+    width: 500px;
+    margin: 20px auto;
+    border: 1px solid black; /* Default light mode border color */
+    opacity: 1; /* Ensure visible */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+#title {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    animation: bounce-in 1s ease-in-out;
+    color: #6bb9f0; /* Light blue for the title */
+}
+
+/* Center the board and keyboard */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    width: 350px;
+    height: 420px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 1; /* Ensure board is visible */
+    animation: fade-in 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.tile {
+    border: 2px solid lightgray;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+    color: black; /* Default text color for tiles */
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.correct {
+    background-color: #6bb9f0; /* Light blue for correct */
+    color: white; /* Text color for correct tiles */
+    border-color: white;
+}
+
+.present {
+    background-color: #f1c40f; /* Yellow for present */
+    color: white; /* Text color for present tiles */
+    border-color: white;
+}
+
+.absent {
+    background-color: #e74c3c; /* Red for absent */
+    color: white; /* Text color for absent tiles */
+    border-color: white;
+}
+
+.keyboard-row {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.key-tile, .enter-key-tile {
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border: 1px solid lightgray;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.key-tile:hover, .enter-key-tile:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.enter-key-tile {
+    width: 76px;
+}
+
+/* Dark Mode Styles */
+body[data-theme='dark'] {
+    background-color: #141414; /* Dark grey background color */
+    color: white; /* Text color for dark mode */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text colors */
+}
+
+body[data-theme='dark'] hr {
+    border-color: white; /* Dark mode border color */
+}
+
+body[data-theme='dark'] #board {
+    border-color: white; /* Ensure board border color is visible in dark mode */
+}
+
+body[data-theme='dark'] .tile {
+    color: white; /* Text color for tiles in dark mode */
+}
+
+body[data-theme='dark'] .correct {
+    background-color: #6bb9f0; /* Light blue for correct in dark mode */
+    color: white; /* Text color for correct tiles in dark mode */
+    border-color: white;
+}
+
+body[data-theme='dark'] .present {
+    background-color: #f1c40f; /* Yellow for present in dark mode */
+    color: white; /* Text color for present tiles in dark mode */
+    border-color: white;
+}
+
+body[data-theme='dark'] .absent {
+    background-color: #e74c3c; /* Red for absent in dark mode */
+    color: white; /* Text color for absent tiles in dark mode */
+    border-color: white;
+}
+
+/* Toggle Button Styles */
+#theme-toggle {
+    background: none;
+    border: 2px solid lightgray; /* Light gray outline */
+    border-radius: 50%; /* Rounded shape for the button */
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px; /* Increased padding for better visibility */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for icon and border colors */
+}
+
+#theme-toggle i {
+    color: black; /* Default icon color for light mode */
+    transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+body[data-theme='dark'] #theme-toggle {
+    border-color: white; /* White outline in dark mode */
+}
+
+body[data-theme='dark'] #theme-toggle i {
+    color: white; /* Icon color for dark mode */
+}
+
+/* Modal Styles */
+#rules-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it is on top of other content */
+}
+
+#rules-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+}
+
+#close-rules {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#close-rules:hover {
+    background-color: #45a049;
+}
+
+/* Score Styles */
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333; /* Default score color */
+    transition: color 0.5s ease, transform 0.5s ease; /* Smooth transition for color and scaling */
+}
+
+/* Animation for Score */
+@keyframes score-bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#score.animated {
+    animation: score-bounce 1s ease-in-out;
+}
+
+/* Fireworks Effect */
+
+
+
+@keyframes explode {
+    0% { transform: scale(0); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+/* Animation Keyframes */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce-in {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { transform: scale(1); }
+}

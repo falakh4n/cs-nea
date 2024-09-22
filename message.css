@@ -1,0 +1,72 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #333; /* Fallback background color */
+    background: linear-gradient(to right, #333, #555); /* Gradient background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align at the top */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+}
+
+/* Container for message */
+.message-container {
+    background: #2c2c2c; /* Dark Charcoal Grey */
+    width: 450px; /* Match the original form container width */
+    padding: 1.5rem;
+    margin-top: 50px; /* Space from the top of the page */
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9); /* Same shadow for "pop" effect */
+    text-align: center; /* Center the text */
+}
+
+/* Styles for the success message */
+.message {
+    padding: 15px;
+    margin-top: 1rem; /* Space between the message and container top */
+    border-radius: 5px;
+    background-color: #00bcd4; /* Teal background for the message box */
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Pop effect for message */
+    transition: opacity 0.6s ease-out;
+    opacity: 1;
+}
+
+/* Error message style */
+.message.error {
+    background-color: #f44336; /* Red background for errors */
+}
+
+/* Hidden message style */
+.message.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Back to Login Button */
+.back-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    color: white;
+    background-color: #00bcd4; /* Teal background */
+    text-decoration: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0097a7; /* Darker Teal on hover */
+}

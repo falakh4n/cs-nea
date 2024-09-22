@@ -1,0 +1,83 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #333;
+    background: linear-gradient(to right, #333, #555);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the container at the top */
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+}
+
+.container {
+    background: #2c2c2c; /* Dark Charcoal Grey */
+    width: 450px; /* Keep the original width */
+    padding: 1.5rem;
+    margin-top: 50px; /* Space from the top of the page */
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+    text-align: center; /* Center the text inside the container */
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bcd4; /* Teal */
+    margin-bottom: 1rem;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 1rem; /* Space between input and button */
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 10px; /* Position the icon within the input */
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Adjust for vertical alignment */
+    color: #00bcd4; /* Teal color */
+    font-size: 1rem; /* Adjust the icon size if needed */
+}
+
+input[type="email"] {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #555; /* Medium Grey */
+    padding-left: 2.5rem; /* Add padding for the icon */
+    font-size: 15px;
+}
+
+button {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem; /* Adjust padding to fit the icon */
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #00bcd4; /* Teal */
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center; /* Align items in the center */
+    justify-content: center; /* Center the text and icon */
+    transition: background 0.3s ease;
+}
+
+button i {
+    margin-right: 0.5rem; /* Space between icon and text */
+}
+
+button:hover {
+    background: #0097a7; /* Darker Teal */
+}

@@ -1,0 +1,80 @@
+/* register.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #333;
+    background: linear-gradient(to right, #333, #555);
+    color: white;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align to the top */
+    margin: 0;
+    padding: 1rem; /* Optional: add padding to avoid content touching the edges */
+    color:white;
+}
+
+.container {
+    background: #2c2c2c; /* Dark Charcoal Grey */
+    width: 450px; /* Match the width of other containers */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.9);
+    margin-top: 50px; /* Adjust margin-top to move the container down from the top */
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+    color: #00bcd4; /* Teal */
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Ensure form doesn’t exceed container width */
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #757575; /* Grey */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #555; /* Medium Grey */
+    border-radius: 4px;
+    background-color: #222; /* Darker grey background for input */
+    color: #fff;
+}
+
+button {
+    background-color: #00bcd4; /* Teal */
+    color: #fff;
+    padding: 0.6rem 1.2rem; /* Adjust padding for a reasonable button size */
+    border-radius: 6px; /* Slightly smaller border radius */
+    font-size: 1.2rem; /* Adjust font size */
+    cursor: pointer;
+    border: 2px solid #2c2c2c; /* Dark Charcoal Grey */
+    transition: background-color 0.3s, font-size 0.3s;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #0097a7; /* Darker Teal */
+    font-size: 1.3rem; /* Slightly larger font size on hover */
+    border: 2px solid #00bcd4; /* Teal */
+}
